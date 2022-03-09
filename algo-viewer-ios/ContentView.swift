@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selection = Tab.sorting
+    
+    enum Tab {
+        case graph
+        case sorting
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $selection) {
+            Text("Graph View")
+                .tabItem {
+                    Label("Graphs", systemImage: "star")
+                }
+                .tag(Tab.graph)
+            
+            Text("Sorting View")
+                .tabItem{
+                    Label("Arrays", systemImage: "star")
+                }
+                .tag(Tab.sorting)
+        }
     }
 }
 
