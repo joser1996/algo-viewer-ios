@@ -13,8 +13,8 @@ struct BarGraph: View {
             Text("Bar Graph")
                 .font(.title)
             BarChartView(title: "The Title")
-                .frame(width: 300, height: 300)
-            Spacer()
+                .frame(width: 300, height: 300, alignment: .center)
+            //Spacer()
         }
     }
 }

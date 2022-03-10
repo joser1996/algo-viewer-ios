@@ -12,7 +12,6 @@
 		FFB526EB27D93E7C0086D20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB526EA27D93E7C0086D20A /* Assets.xcassets */; };
 		FFB526EE27D93E7C0086D20A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB526ED27D93E7C0086D20A /* Preview Assets.xcassets */; };
 		FFB526F627D965EF0086D20A /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526F527D965EF0086D20A /* Graphs.swift */; };
-		FFB526F827D9661F0086D20A /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526F727D9661F0086D20A /* Arrays.swift */; };
 		FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FA27D968570086D20A /* AlgorithmTypes.swift */; };
 		FFB526FE27D968D10086D20A /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FD27D968D10086D20A /* Sorter.swift */; };
 		FFB5270027D97B4A0086D20A /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FF27D97B4A0086D20A /* Frame.swift */; };
@@ -29,7 +28,6 @@
 		FFB526EA27D93E7C0086D20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB526ED27D93E7C0086D20A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFB526F527D965EF0086D20A /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
-		FFB526F727D9661F0086D20A /* Arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		FFB526FA27D968570086D20A /* AlgorithmTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTypes.swift; sourceTree = "<group>"; };
 		FFB526FD27D968D10086D20A /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
 		FFB526FF27D97B4A0086D20A /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
@@ -90,6 +88,7 @@
 		FFB526F427D941120086D20A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FFB5270B27D9921B0086D20A /* Playground */,
 				FFB5270227D987420086D20A /* Array */,
 				FFB5270127D987350086D20A /* Graph */,
 				FFB526E827D93E7B0086D20A /* ContentView.swift */,
@@ -125,13 +124,19 @@
 		FFB5270227D987420086D20A /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				FFB526F727D9661F0086D20A /* Arrays.swift */,
 				FFB5270327D9875A0086D20A /* BarGraph.swift */,
 				FFB5270527D98D2D0086D20A /* BarChartView.swift */,
 				FFB5270727D98DCA0086D20A /* ChartHeaderView.swift */,
 				FFB5270927D98E270086D20A /* ChartAreaView.swift */,
 			);
 			path = Array;
+			sourceTree = "<group>";
+		};
+		FFB5270B27D9921B0086D20A /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +214,6 @@
 				FFB5270827D98DCA0086D20A /* ChartHeaderView.swift in Sources */,
 				FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */,
 				FFB526F627D965EF0086D20A /* Graphs.swift in Sources */,
-				FFB526F827D9661F0086D20A /* Arrays.swift in Sources */,
 				FFB5270A27D98E270086D20A /* ChartAreaView.swift in Sources */,
 				FFB5270627D98D2D0086D20A /* BarChartView.swift in Sources */,
 				FFB5270027D97B4A0086D20A /* Frame.swift in Sources */,
