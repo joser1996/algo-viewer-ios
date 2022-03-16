@@ -12,7 +12,7 @@ enum GraphAlgorithms {
     case DFS
 }
 
-enum SortAlgorithms {
-    case QuickSort
-    case MergeSort
+enum SortAlgorithms: String {
+    case QuickSort = "Quick Sort"
+    case MergeSort = "Merge Sort"
 }

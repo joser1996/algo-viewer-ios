@@ -22,31 +22,31 @@ struct ContentView: View {
         
         NavigationView {
             TabView(selection: $selection) {
-                    Graphs()
-                        .tabItem {
-                            Label("Graphs", systemImage: "map")
-                        }
-                        .tag(Tab.graph)
-                    
-                    BarGraph()
-                        .tabItem{
-                            Label("Arrays", systemImage: "list.bullet")
-                        }
-                        .tag(Tab.sorting)
-                }
-                .onAppear {
-                    UITabBar.appearance().barTintColor = .gray
-                }
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Button {
-                            print("Bring up settings page")
-                        } label: {
-                            Label("options", systemImage: "gearshape")
-                        }
+                Graphs()
+                    .tabItem {
+                        Label("Graphs", systemImage: "map")
+                    }
+                    .tag(Tab.graph)
+                
+                BarPlot(title: sorter.algorithm.rawValue, frame: sorter.frames)
+                    .tabItem{
+                        Label("Arrays", systemImage: "list.bullet")
+                    }
+                    .tag(Tab.sorting)
+            }
+            .onAppear {
+                UITabBar.appearance().barTintColor = .gray
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        print("Bring up settings page")
+                    } label: {
+                        Label("options", systemImage: "gearshape")
                     }
                 }
-                .accentColor(.red)
+            }
+            .accentColor(.red)
         }
         .onAppear {
             sorter.quickSortFrames()
@@ -58,5 +58,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portrait)
     }
 }

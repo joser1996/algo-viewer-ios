@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C21E27E24EDE0051816D /* BarDataItem.swift */; };
+		FF97C22327E2874B0051816D /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22227E2874B0051816D /* BarPlot.swift */; };
+		FF97C22527E287990051816D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22427E287990051816D /* HeaderView.swift */; };
+		FF97C22727E289740051816D /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22627E289740051816D /* PlotView.swift */; };
+		FF97C22927E28F590051816D /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22827E28F590051816D /* BarView.swift */; };
 		FFB526E727D93E7B0086D20A /* algo_viewer_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526E627D93E7B0086D20A /* algo_viewer_iosApp.swift */; };
 		FFB526E927D93E7B0086D20A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526E827D93E7B0086D20A /* ContentView.swift */; };
 		FFB526EB27D93E7C0086D20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB526EA27D93E7C0086D20A /* Assets.xcassets */; };
@@ -15,13 +20,14 @@
 		FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FA27D968570086D20A /* AlgorithmTypes.swift */; };
 		FFB526FE27D968D10086D20A /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FD27D968D10086D20A /* Sorter.swift */; };
 		FFB5270027D97B4A0086D20A /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB526FF27D97B4A0086D20A /* Frame.swift */; };
-		FFB5270427D9875A0086D20A /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5270327D9875A0086D20A /* BarGraph.swift */; };
-		FFB5270627D98D2D0086D20A /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5270527D98D2D0086D20A /* BarChartView.swift */; };
-		FFB5270827D98DCA0086D20A /* ChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5270727D98DCA0086D20A /* ChartHeaderView.swift */; };
-		FFB5270A27D98E270086D20A /* ChartAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB5270927D98E270086D20A /* ChartAreaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF97C21E27E24EDE0051816D /* BarDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataItem.swift; sourceTree = "<group>"; };
+		FF97C22227E2874B0051816D /* BarPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
+		FF97C22427E287990051816D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FF97C22627E289740051816D /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		FF97C22827E28F590051816D /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		FFB526E327D93E7B0086D20A /* algo-viewer-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "algo-viewer-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB526E627D93E7B0086D20A /* algo_viewer_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = algo_viewer_iosApp.swift; sourceTree = "<group>"; };
 		FFB526E827D93E7B0086D20A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,10 +37,6 @@
 		FFB526FA27D968570086D20A /* AlgorithmTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTypes.swift; sourceTree = "<group>"; };
 		FFB526FD27D968D10086D20A /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
 		FFB526FF27D97B4A0086D20A /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
-		FFB5270327D9875A0086D20A /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
-		FFB5270527D98D2D0086D20A /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
-		FFB5270727D98DCA0086D20A /* ChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHeaderView.swift; sourceTree = "<group>"; };
-		FFB5270927D98E270086D20A /* ChartAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAreaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB526FA27D968570086D20A /* AlgorithmTypes.swift */,
+				FF97C21E27E24EDE0051816D /* BarDataItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,10 +127,10 @@
 		FFB5270227D987420086D20A /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				FFB5270327D9875A0086D20A /* BarGraph.swift */,
-				FFB5270527D98D2D0086D20A /* BarChartView.swift */,
-				FFB5270727D98DCA0086D20A /* ChartHeaderView.swift */,
-				FFB5270927D98E270086D20A /* ChartAreaView.swift */,
+				FF97C22227E2874B0051816D /* BarPlot.swift */,
+				FF97C22427E287990051816D /* HeaderView.swift */,
+				FF97C22627E289740051816D /* PlotView.swift */,
+				FF97C22827E28F590051816D /* BarView.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -209,13 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB5270427D9875A0086D20A /* BarGraph.swift in Sources */,
+				FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */,
+				FF97C22927E28F590051816D /* BarView.swift in Sources */,
+				FF97C22727E289740051816D /* PlotView.swift in Sources */,
+				FF97C22527E287990051816D /* HeaderView.swift in Sources */,
 				FFB526FE27D968D10086D20A /* Sorter.swift in Sources */,
-				FFB5270827D98DCA0086D20A /* ChartHeaderView.swift in Sources */,
 				FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */,
 				FFB526F627D965EF0086D20A /* Graphs.swift in Sources */,
-				FFB5270A27D98E270086D20A /* ChartAreaView.swift in Sources */,
-				FFB5270627D98D2D0086D20A /* BarChartView.swift in Sources */,
+				FF97C22327E2874B0051816D /* BarPlot.swift in Sources */,
 				FFB5270027D97B4A0086D20A /* Frame.swift in Sources */,
 				FFB526E927D93E7B0086D20A /* ContentView.swift in Sources */,
 				FFB526E727D93E7B0086D20A /* algo_viewer_iosApp.swift in Sources */,
