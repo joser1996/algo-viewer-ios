@@ -28,7 +28,9 @@ struct PlotView: View {
         GeometryReader { gr in
             
             ZStack {
-                RoundedRectangle(cornerRadius: 5.0).fill(Color(#colorLiteral(red: 235, green: 227, blue: 204, alpha: 1)))
+                RoundedRectangle(cornerRadius: 5.0)
+                    .fill(.black)
+                //.fill(Color(#colorLiteral(red: 235, green: 227, blue: 204, alpha: 1)))
                     //.fill(Color(#colorLiteral(red: 0, green: 1, blue: 0.9399639964, alpha: 1)))
                     
                 HStack(spacing: 0) {
