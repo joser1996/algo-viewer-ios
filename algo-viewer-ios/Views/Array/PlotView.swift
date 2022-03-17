@@ -9,33 +9,18 @@ import SwiftUI
 
 //Our canvas
 struct PlotView: View {
-    var frames: Frame
-    var data: [BarDataItem] {
-        let currentFrame = frames.frames[0]
-        var data = [BarDataItem]()
-        for val in currentFrame {
-            data.append(BarDataItem(value: val, numValues: currentFrame.count))
-        }
-        return data
-    }
+    var data: [BarDataItem]
     var maxValue: Double {
-        let currentFrame = frames.frames[0]
-        let maxValue = currentFrame.map { $0 }.max()!
-        return Double(maxValue)
+        return Double(data.map{ $0.value }.max()!)
     }
-    
     var body: some View {
         GeometryReader { gr in
-            
             ZStack {
                 RoundedRectangle(cornerRadius: 5.0)
                     .fill(.black)
-                //.fill(Color(#colorLiteral(red: 235, green: 227, blue: 204, alpha: 1)))
-                    //.fill(Color(#colorLiteral(red: 0, green: 1, blue: 0.9399639964, alpha: 1)))
-                    
                 HStack(spacing: 0) {
                     ForEach(data) { item in
-                        BarView(value: Double(item.value), maxValue: maxValue, numberOfValues: frames.frames[0].count, maxBarHeight: gr.size.height, availableWidth: gr.size.width)
+                        BarView(value: Double(item.value), maxValue: maxValue, numberOfValues: item.numValues, maxBarHeight: gr.size.height, availableWidth: gr.size.width)
                     }
                 }
             }
@@ -45,7 +30,15 @@ struct PlotView: View {
 
 struct PlotView_Previews: PreviewProvider {
     static var sorter = Sorter()
+    static var data: [BarDataItem] {
+        let rawData = sorter.frames.getCurrentFrame()
+        var barData = [BarDataItem]()
+        for val in rawData {
+            barData.append(BarDataItem(value: val, numValues: sorter.dataSize))
+        }
+        return barData
+    }
     static var previews: some View {
-        PlotView(frames: sorter.frames)
+        PlotView(data: data)
     }
 }

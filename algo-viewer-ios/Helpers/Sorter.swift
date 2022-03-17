@@ -20,7 +20,6 @@ class Sorter {
     let algorithm: SortAlgorithms
     var data: [Int]
     let dataSize: Int
-    
     init() {
         range = Bounds(lower: 0, upper: 100)
         ascending = true
@@ -61,6 +60,7 @@ extension Sorter {
     }
 
     func quickSortFrames() {
+        if frames.frames.count > 1 {return}
         let low: Int = 0
         let high: Int = self.dataSize - 1
         quickSort(low, high)

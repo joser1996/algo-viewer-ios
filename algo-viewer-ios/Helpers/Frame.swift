@@ -40,8 +40,9 @@ class Frame {
     }
     
     func advanceFrame() -> Bool {
-        if (currentFrameIndex <  self.frames.count){
+        if (currentFrameIndex <  self.frames.count - 1){
             currentFrameIndex += 1
+            print("New Frame index \(currentFrameIndex) out of \(frames.count)")
             return true
         }
         return false
