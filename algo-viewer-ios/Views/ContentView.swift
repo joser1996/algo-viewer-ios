@@ -24,7 +24,7 @@ struct ContentView: View {
                 if (running) {return}
                 running = true
                 print("View Was Tapped!")
-                md.sorter.quickSortFrames()
+                md.sorter.sortFrames()
                 let dataSize = md.sorter.dataSize
                 let animationDuration = (dataSize/10)*500
                 let steps: Int = md.sorter.frames.frames.count
