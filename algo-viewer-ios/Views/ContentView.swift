@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var selection = Tab.sorting
     @EnvironmentObject var md: ModelData
     @State private var running: Bool = false
-    
+    @State private var isShowingOptions = false
     enum Tab {
         case graph
         case sorting
@@ -64,9 +64,10 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        print("Bring up settings page")
+                        print("Butt Presssed")
+                        self.isShowingOptions = true
                     } label: {
-                        Label("options", systemImage: "gearshape")
+                        Label("Options", systemImage: "gear")
                     }
                 }
                 ToolbarItem(placement: .automatic) {
@@ -78,6 +79,11 @@ struct ContentView: View {
                     }
                 }
             }
+            .background(
+                NavigationLink(destination: SettingsPage(), isActive: $isShowingOptions) {
+                    EmptyView()
+                }.hidden() //not visible to user
+            )
             .accentColor(.red)
         }
     }

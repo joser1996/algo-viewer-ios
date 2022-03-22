@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF82468C27EA8CA900CF60DA /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82468B27EA8CA900CF60DA /* SettingsPage.swift */; };
 		FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C21E27E24EDE0051816D /* BarDataItem.swift */; };
 		FF97C22327E2874B0051816D /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22227E2874B0051816D /* BarPlot.swift */; };
 		FF97C22527E287990051816D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22427E287990051816D /* HeaderView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF82468B27EA8CA900CF60DA /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		FF97C21E27E24EDE0051816D /* BarDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataItem.swift; sourceTree = "<group>"; };
 		FF97C22227E2874B0051816D /* BarPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
 		FF97C22427E287990051816D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FFB5270227D987420086D20A /* Array */,
 				FFB5270127D987350086D20A /* Graph */,
 				FFB526E827D93E7B0086D20A /* ContentView.swift */,
+				FF82468B27EA8CA900CF60DA /* SettingsPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				FF97C22727E289740051816D /* PlotView.swift in Sources */,
 				FF97C22D27E2AFFC0051816D /* ModelData.swift in Sources */,
 				FF97C22527E287990051816D /* HeaderView.swift in Sources */,
+				FF82468C27EA8CA900CF60DA /* SettingsPage.swift in Sources */,
 				FFB526FE27D968D10086D20A /* Sorter.swift in Sources */,
 				FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */,
 				FFB526F627D965EF0086D20A /* Graphs.swift in Sources */,
