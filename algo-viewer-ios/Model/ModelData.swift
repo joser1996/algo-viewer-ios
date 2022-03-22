@@ -31,6 +31,11 @@ final class ModelData: ObservableObject {
         return barData
     }
     
+    func resetFrames() {
+        sorter.frames.resetFrames()
+        self.currentFrame = buildBarDataItems(data: sorter.frames.getCurrentFrame())
+    }
+    
     func updateFrame() -> Bool{
         let frames: Frame = sorter.frames
         if (frames.advanceFrame()) {

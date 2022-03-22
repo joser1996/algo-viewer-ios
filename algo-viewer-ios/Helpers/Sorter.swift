@@ -25,7 +25,7 @@ class Sorter {
         ascending = true
         algorithm = SortAlgorithms.QuickSort
         data = []
-        dataSize = 50
+        dataSize = 100
         for _ in 1...dataSize {
             data.append(Int.random(in: range.lower..<range.upper))
         }

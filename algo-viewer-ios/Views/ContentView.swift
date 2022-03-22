@@ -7,31 +7,42 @@
 
 import SwiftUI
 
-func delay(_ delay: Double, closure:@escaping ()->()) {
-    DispatchQueue.main.asyncAfter(
-        deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC)))/Double(NSEC_PER_SEC), execute: closure)
-}
-
 struct ContentView: View {
     
     @State private var selection = Tab.sorting
     @EnvironmentObject var md: ModelData
+    @State private var running: Bool = false
     
     enum Tab {
         case graph
         case sorting
     }
+    
     var body: some View {
         let tap = TapGesture()
             .onEnded { _ in
+                if (running) {return}
+                running = true
                 print("View Was Tapped!")
                 md.sorter.quickSortFrames()
-                let numberFrames: Int = md.sorter.frames.frames.count
-                for _ in 0...numberFrames {
+                let dataSize = md.sorter.dataSize
+                let animationDuration = (dataSize/10)*500
+                let steps: Int = md.sorter.frames.frames.count
+                let stepDuration = (animationDuration/steps)
+                (0..<steps).forEach { step in
+                    let updateInterval = DispatchTimeInterval.milliseconds(step*stepDuration)
+                    let deadline = DispatchTime.now() + updateInterval
+                    DispatchQueue.main.asyncAfter(deadline: deadline) {
                         md.updateFrame()
+                        if step == steps - 1 {
+                            running = false
+                        }
+                    }
+
                 }
 
             }
+        
         NavigationView {
             TabView(selection: $selection) {
                 Graphs()
@@ -56,6 +67,14 @@ struct ContentView: View {
                         print("Bring up settings page")
                     } label: {
                         Label("options", systemImage: "gearshape")
+                    }
+                }
+                ToolbarItem(placement: .automatic) {
+                    Button {
+                        print("Reset")
+                        md.resetFrames()
+                    } label: {
+                        Label("Reset", systemImage: "arrow.clockwise")
                     }
                 }
             }
