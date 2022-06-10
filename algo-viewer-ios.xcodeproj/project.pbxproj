@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF6D14DD2852D23800A5AAB7 /* SortAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D14DC2852D23800A5AAB7 /* SortAlgorithm.swift */; };
+		FF6D14DF2852D3FF00A5AAB7 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D14DE2852D3FF00A5AAB7 /* QuickSort.swift */; };
 		FF82468C27EA8CA900CF60DA /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82468B27EA8CA900CF60DA /* SettingsPage.swift */; };
 		FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C21E27E24EDE0051816D /* BarDataItem.swift */; };
 		FF97C22327E2874B0051816D /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22227E2874B0051816D /* BarPlot.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF6D14DC2852D23800A5AAB7 /* SortAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithm.swift; sourceTree = "<group>"; };
+		FF6D14DE2852D3FF00A5AAB7 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
 		FF82468B27EA8CA900CF60DA /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		FF97C21E27E24EDE0051816D /* BarDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataItem.swift; sourceTree = "<group>"; };
 		FF97C22227E2874B0051816D /* BarPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				FFB526FD27D968D10086D20A /* Sorter.swift */,
 				FFB526FF27D97B4A0086D20A /* Frame.swift */,
+				FF6D14DC2852D23800A5AAB7 /* SortAlgorithm.swift */,
+				FF6D14DE2852D3FF00A5AAB7 /* QuickSort.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 				FFB5270027D97B4A0086D20A /* Frame.swift in Sources */,
 				FFB526E927D93E7B0086D20A /* ContentView.swift in Sources */,
 				FFB526E727D93E7B0086D20A /* algo_viewer_iosApp.swift in Sources */,
+				FF6D14DD2852D23800A5AAB7 /* SortAlgorithm.swift in Sources */,
 				FF97C22B27E2AC000051816D /* FrameData.swift in Sources */,
+				FF6D14DF2852D3FF00A5AAB7 /* QuickSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
