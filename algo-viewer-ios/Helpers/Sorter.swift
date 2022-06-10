@@ -32,6 +32,7 @@ class Sorter {
         frames = Frame(data)
     }
     
+    //TODO: Use Strategy Pattern here
     func sortFrames() {
         switch self.algorithm {
         case SortAlgorithms.MergeSort:
@@ -44,6 +45,8 @@ class Sorter {
 }
 
 
+//THIS is UGLY define each sorting algorithm behavior in own class
+//
 //all quicksort stuff
 extension Sorter {
     private func partition(_ low: Int, _ high: Int) -> Int {

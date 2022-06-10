@@ -7,11 +7,11 @@
 
 import Foundation
 
-
+ 
 final class ModelData: ObservableObject {
-    //MARK: Sorting stuff
     var sorter: Sorter
     @Published var currentFrame: [BarDataItem]
+    
     init(){
         //set current frame
         self.sorter = Sorter()
@@ -36,7 +36,7 @@ final class ModelData: ObservableObject {
         self.currentFrame = buildBarDataItems(data: sorter.frames.getCurrentFrame())
     }
     
-    func updateFrame() -> Bool{
+    func updateFrame() -> Bool {
         let frames: Frame = sorter.frames
         if (frames.advanceFrame()) {
             let rawData = frames.getCurrentFrame()
