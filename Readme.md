@@ -5,3 +5,6 @@ as BFS and DFS in the future.
 
 I also wanted to use this as an opportunity to become more familiar with SwiftUI
 as I have experience with UIKit only.
+
+# Demo
+![Demo](demo.gif)
