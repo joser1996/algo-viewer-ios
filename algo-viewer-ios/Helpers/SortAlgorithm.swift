@@ -15,9 +15,12 @@ class SortAlgorithm: SortProtocol {
     func sort(data: [Int]) -> [[Int]] {
         fatalError("Must overrid")
     }
+    
+    var name: String
     var ascending: Bool
     
-    init(ascending: Bool = true) {
+    init(ascending: Bool = true, name: String = "N/A") {
         self.ascending = ascending
+        self.name = name
     }
 }

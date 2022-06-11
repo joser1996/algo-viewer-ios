@@ -12,9 +12,15 @@ class QuickSort: SortAlgorithm {
     var steps: [[Int]] = []
     let original = 0
     
+    init() {
+        super.init(ascending: true, name: "Quick Sort")
+    }
+    
     private func partition(_ left: Int, _ right: Int) -> Int {
+        if (left == right) { return left }
         let pivot = inProgress[right]
         var i = left - 1
+        
         
         for j in left...right - 1 {
             if (inProgress[j] < pivot) {

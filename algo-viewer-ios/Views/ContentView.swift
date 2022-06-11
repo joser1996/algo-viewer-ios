@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selection = Tab.sorting
-    @EnvironmentObject var md: ModelData
+    @EnvironmentObject var md: Sorter
     @State private var running: Bool = false
     @State private var isShowingOptions = false
     enum Tab {
@@ -24,16 +24,16 @@ struct ContentView: View {
                 if (running) {return}
                 running = true
                 print("View Was Tapped!")
-                md.sorter.sortFrames()
-                let dataSize = md.sorter.dataSize
+                md.sortFrames()
+                let dataSize = md.dataSize
                 let animationDuration = (dataSize/10)*500
-                let steps: Int = md.sorter.frames.frames.count
+                let steps: Int = md.frames.count
                 let stepDuration = (animationDuration/steps)
                 (0..<steps).forEach { step in
                     let updateInterval = DispatchTimeInterval.milliseconds(step*stepDuration)
                     let deadline = DispatchTime.now() + updateInterval
                     DispatchQueue.main.asyncAfter(deadline: deadline) {
-                        md.updateFrame()
+                        md.nextFrame()
                         if step == steps - 1 {
                             running = false
                         }
@@ -51,7 +51,7 @@ struct ContentView: View {
                     }
                     .tag(Tab.graph)
                 
-                BarPlot(title: md.sorter.algorithm.rawValue)
+                BarPlot(title: md.algorithm.name)
                     .tabItem{
                         Label("Arrays", systemImage: "list.bullet")
                     }
@@ -73,7 +73,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .automatic) {
                     Button {
                         print("Reset")
-                        md.resetFrames()
+                        md.resetFrame()
                     } label: {
                         Label("Reset", systemImage: "arrow.clockwise")
                     }
@@ -92,7 +92,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
+            .environmentObject(Sorter())
             .previewInterfaceOrientation(.portrait)
     }
 }
