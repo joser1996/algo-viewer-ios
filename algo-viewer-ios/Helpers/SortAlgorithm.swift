@@ -18,6 +18,8 @@ class SortAlgorithm: SortProtocol {
     
     var name: String
     var ascending: Bool
+    var inProgress: [Int] = []
+    var steps: [[Int]] = []
     
     init(ascending: Bool = true, name: String = "N/A") {
         self.ascending = ascending

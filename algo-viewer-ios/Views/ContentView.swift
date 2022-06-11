@@ -33,7 +33,7 @@ struct ContentView: View {
                     let updateInterval = DispatchTimeInterval.milliseconds(step*stepDuration)
                     let deadline = DispatchTime.now() + updateInterval
                     DispatchQueue.main.asyncAfter(deadline: deadline) {
-                        md.nextFrame()
+                        _ = md.nextFrame()
                         if step == steps - 1 {
                             running = false
                         }

@@ -15,6 +15,8 @@ class SortAlgorithmFactory {
             return QuickSort()
         case .MergeSort:
             return MergeSort()
+        case .BubbleSort:
+            return BubbleSort()
         }
     }
 }

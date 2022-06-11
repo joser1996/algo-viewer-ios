@@ -19,5 +19,5 @@ enum SortAlgorithms: String, CaseIterable, Identifiable {
     var id: Self { self }
     case QuickSort = "Quick Sort"
     case MergeSort = "Merge Sort"
-//    case HeapSort = "Heap Sort"
+    case BubbleSort = "Bubble Sort"
 }

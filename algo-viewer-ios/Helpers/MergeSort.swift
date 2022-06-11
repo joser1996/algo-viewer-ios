@@ -8,8 +8,6 @@
 import Foundation
 
 class MergeSort: SortAlgorithm {
-    var inProgress: [Int] = []
-    var steps: [[Int]] = []
     
     init() {
         super.init(ascending: true, name: "Merge Sort")

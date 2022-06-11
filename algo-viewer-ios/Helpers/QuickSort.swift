@@ -8,9 +8,6 @@
 import Foundation
 
 class QuickSort: SortAlgorithm {
-    var inProgress: [Int] = []
-    var steps: [[Int]] = []
-    let original = 0
     
     init() {
         super.init(ascending: true, name: "Quick Sort")
