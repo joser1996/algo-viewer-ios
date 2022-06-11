@@ -80,7 +80,7 @@ struct ContentView: View {
                 }
             }
             .background(
-                NavigationLink(destination: SettingsPage(), isActive: $isShowingOptions) {
+                NavigationLink(destination: SettingsPage(selection: md.algorithmType), isActive: $isShowingOptions) {
                     EmptyView()
                 }.hidden() //not visible to user
             )

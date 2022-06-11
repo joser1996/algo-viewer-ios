@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-//vaule types: each instance has a copy: struct, enums
-//reference: one copy and multiple refrences: class
-
 @main
 struct algo_viewer_iosApp: App {
     //@StateObject private var md = ModelData()

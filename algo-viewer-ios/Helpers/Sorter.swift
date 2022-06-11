@@ -9,12 +9,12 @@
 import Foundation
 
 final class Sorter: ObservableObject {
-    var frames: [[Int]]
     @Published var currentFrame: [Int]
+    @Published var algorithm: SortAlgorithm
+    var algorithmType: SortAlgorithms
+    var frames: [[Int]]
     var currentIndex: Int
-    
     var range: (low: Int, upper: Int)
-    var algorithm: SortAlgorithm
     var data: [Int]
     let dataSize: Int
     
@@ -22,19 +22,25 @@ final class Sorter: ObservableObject {
         range = (low: 0, upper: 100)
         //algorithm = QuickSort()
         algorithm = QuickSort()
+        algorithmType = .QuickSort
         data = []
         dataSize = 100
         for _ in 1...dataSize {
             data.append(Int.random(in: range.low..<range.upper))
         }
         frames = []
-        currentFrame = []
+        currentFrame = data
         currentIndex = 0
     }
     
     func sortFrames() {
         self.frames = algorithm.sort(data: data)
         currentFrame = frames[0]
+    }
+    
+    func setAlgorithm(to alg: SortAlgorithm, of type: SortAlgorithms) {
+        self.algorithm = alg
+        self.algorithmType = type
     }
     
     func getCurrentFrame() -> [Int]? {
