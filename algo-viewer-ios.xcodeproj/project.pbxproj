@@ -13,6 +13,10 @@
 		FF5CB12628553CCD00287C05 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CB12528553CCD00287C05 /* BubbleSort.swift */; };
 		FF6D14DD2852D23800A5AAB7 /* SortAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D14DC2852D23800A5AAB7 /* SortAlgorithm.swift */; };
 		FF6D14DF2852D3FF00A5AAB7 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D14DE2852D3FF00A5AAB7 /* QuickSort.swift */; };
+		FF6D97E2286012B900116104 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D97E1286012B900116104 /* NodeView.swift */; };
+		FF6D97E42860142E00116104 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D97E32860142E00116104 /* Node.swift */; };
+		FF6D97E62860171600116104 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D97E52860171600116104 /* EdgeView.swift */; };
+		FF6D97E82860179800116104 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6D97E72860179800116104 /* Edge.swift */; };
 		FF82468C27EA8CA900CF60DA /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF82468B27EA8CA900CF60DA /* SettingsPage.swift */; };
 		FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C21E27E24EDE0051816D /* BarDataItem.swift */; };
 		FF97C22327E2874B0051816D /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97C22227E2874B0051816D /* BarPlot.swift */; };
@@ -36,6 +40,10 @@
 		FF5CB12528553CCD00287C05 /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		FF6D14DC2852D23800A5AAB7 /* SortAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithm.swift; sourceTree = "<group>"; };
 		FF6D14DE2852D3FF00A5AAB7 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
+		FF6D97E1286012B900116104 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
+		FF6D97E32860142E00116104 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		FF6D97E52860171600116104 /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
+		FF6D97E72860179800116104 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		FF82468B27EA8CA900CF60DA /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		FF97C21E27E24EDE0051816D /* BarDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataItem.swift; sourceTree = "<group>"; };
 		FF97C22227E2874B0051816D /* BarPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
@@ -118,6 +126,8 @@
 			children = (
 				FF2DDA4828544305008EF0FC /* SettingsPageModel.swift */,
 				FF97C21E27E24EDE0051816D /* BarDataItem.swift */,
+				FF6D97E32860142E00116104 /* Node.swift */,
+				FF6D97E72860179800116104 /* Edge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				FFB526F527D965EF0086D20A /* Graphs.swift */,
+				FF6D97E1286012B900116104 /* NodeView.swift */,
+				FF6D97E52860171600116104 /* EdgeView.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -233,19 +245,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6D97E82860179800116104 /* Edge.swift in Sources */,
 				FF97C21F27E24EDE0051816D /* BarDataItem.swift in Sources */,
 				FF2DDA4928544305008EF0FC /* SettingsPageModel.swift in Sources */,
 				FF97C22927E28F590051816D /* BarView.swift in Sources */,
 				FF97C22727E289740051816D /* PlotView.swift in Sources */,
 				FF5CB124285531B000287C05 /* SortAlgorithmFactory.swift in Sources */,
 				FF2DDA472854370F008EF0FC /* MergeSort.swift in Sources */,
+				FF6D97E42860142E00116104 /* Node.swift in Sources */,
 				FF97C22527E287990051816D /* HeaderView.swift in Sources */,
 				FF82468C27EA8CA900CF60DA /* SettingsPage.swift in Sources */,
+				FF6D97E62860171600116104 /* EdgeView.swift in Sources */,
 				FFB526FE27D968D10086D20A /* Sorter.swift in Sources */,
 				FFB526FB27D968570086D20A /* AlgorithmTypes.swift in Sources */,
 				FFB526F627D965EF0086D20A /* Graphs.swift in Sources */,
 				FF97C22327E2874B0051816D /* BarPlot.swift in Sources */,
 				FFB5270027D97B4A0086D20A /* Frame.swift in Sources */,
+				FF6D97E2286012B900116104 /* NodeView.swift in Sources */,
 				FFB526E927D93E7B0086D20A /* ContentView.swift in Sources */,
 				FFB526E727D93E7B0086D20A /* algo_viewer_iosApp.swift in Sources */,
 				FF6D14DD2852D23800A5AAB7 /* SortAlgorithm.swift in Sources */,

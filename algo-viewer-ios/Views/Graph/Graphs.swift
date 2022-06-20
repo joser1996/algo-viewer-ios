@@ -7,9 +7,33 @@
 
 import SwiftUI
 
-struct Graphs: View {
+let squareSize: CGFloat = 10
+
+struct Square: View {
+    var color: Color
+    
     var body: some View {
-        Text("Graph View")
+        RoundedRectangle(cornerRadius: 0)
+            .frame(width: squareSize, height: squareSize, alignment: .center)
+            .foregroundColor(color)
+    }
+}
+
+struct Graphs: View {
+    static let spacingDesired: CGFloat = 25
+    
+    let rows = [
+        GridItem(.fixed(squareSize), spacing: spacingDesired, alignment: .center),
+        GridItem(.fixed(squareSize), spacing: spacingDesired, alignment: .center)
+    ]
+    
+    
+    var body: some View {
+        LazyHGrid(rows: rows, alignment: .center, spacing: Graphs.spacingDesired, pinnedViews: []) {
+            ForEach (0 ..< 50) {_ in
+                Square(color: .red)
+            }
+        }
     }
 }
 
